@@ -1,0 +1,96 @@
+{
+	"id": "b016939d-34c3-4e96-9d62-debad1d4a4a9",
+	"name": "Dog API Tests",
+	"timestamp": "2024-03-06T14:09:46.324Z",
+	"collection_id": "29125598-4e7afb9c-f89a-4d5a-8e26-060775150a6c",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 2,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-06T14:09:43.847Z",
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "328b5a5a-efd0-4f7c-a21f-311a7924c30a",
+			"name": "Get Random dog Image",
+			"url": "https://dog.ceo/api/breeds/image/random",
+			"time": 230,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has imageUrl": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has imageUrl": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				230
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has imageUrl": true
+				}
+			]
+		},
+		{
+			"id": "ebd416c8-afc7-40e2-baf8-2cefe3133f16",
+			"name": "Get Random dog Image-wrong -params",
+			"url": "https://dog.ceo/api/breeds/image/random",
+			"time": 1288,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Error image is not found": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Error image is not found": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				1288
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Error image is not found": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1518,
+	"collection": {
+		"requests": [
+			{
+				"id": "328b5a5a-efd0-4f7c-a21f-311a7924c30a",
+				"method": "GET"
+			},
+			{
+				"id": "ebd416c8-afc7-40e2-baf8-2cefe3133f16",
+				"method": "GET"
+			}
+		]
+	}
+}
